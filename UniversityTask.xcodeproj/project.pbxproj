@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		9BBB729E2C62581800356FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB729D2C62581800356FDA /* AppDelegate.swift */; };
 		9BBB72A02C62581800356FDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB729F2C62581800356FDA /* SceneDelegate.swift */; };
-		9BBB72A22C62581800356FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72A12C62581800356FDA /* ViewController.swift */; };
 		9BBB72A52C62581800356FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB72A32C62581800356FDA /* Main.storyboard */; };
 		9BBB72A72C62581A00356FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB72A62C62581A00356FDA /* Assets.xcassets */; };
 		9BBB72AA2C62581A00356FDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB72A82C62581A00356FDA /* LaunchScreen.storyboard */; };
 		9BBB72B52C62581A00356FDA /* UniversityTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72B42C62581A00356FDA /* UniversityTaskTests.swift */; };
 		9BBB72BF2C62581A00356FDA /* UniversityTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72BE2C62581A00356FDA /* UniversityTaskUITests.swift */; };
 		9BBB72C12C62581A00356FDA /* UniversityTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72C02C62581A00356FDA /* UniversityTaskUITestsLaunchTests.swift */; };
+		9BBB72D72C6259B000356FDA /* UniversityListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72D62C6259B000356FDA /* UniversityListProtocol.swift */; };
+		9BBB72DA2C625AA200356FDA /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72D92C625AA200356FDA /* University.swift */; };
+		9BBB72DD2C6265B400356FDA /* UniversityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72DC2C6265B400356FDA /* UniversityListViewController.swift */; };
+		9BBB72E02C62677600356FDA /* UniversityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72DE2C62677600356FDA /* UniversityListCell.swift */; };
+		9BBB72E12C62677600356FDA /* UniversityListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BBB72DF2C62677600356FDA /* UniversityListCell.xib */; };
+		9BBB72E32C62724800356FDA /* UniversityListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72E22C62724800356FDA /* UniversityListPresenter.swift */; };
+		9BBB72E62C62732700356FDA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72E52C62732700356FDA /* Constants.swift */; };
+		9BBB72E82C627AA700356FDA /* UniversityListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72E72C627AA700356FDA /* UniversityListInteractor.swift */; };
+		9BBB72EB2C627D4900356FDA /* UniversityListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */; };
+		9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +48,6 @@
 		9BBB729A2C62581800356FDA /* UniversityTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UniversityTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBB729D2C62581800356FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBB729F2C62581800356FDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9BBB72A12C62581800356FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9BBB72A42C62581800356FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BBB72A62C62581A00356FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BBB72A92C62581A00356FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,16 @@
 		9BBB72BA2C62581A00356FDA /* UniversityTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniversityTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBB72BE2C62581A00356FDA /* UniversityTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTaskUITests.swift; sourceTree = "<group>"; };
 		9BBB72C02C62581A00356FDA /* UniversityTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9BBB72D62C6259B000356FDA /* UniversityListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListProtocol.swift; sourceTree = "<group>"; };
+		9BBB72D92C625AA200356FDA /* University.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
+		9BBB72DC2C6265B400356FDA /* UniversityListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListViewController.swift; sourceTree = "<group>"; };
+		9BBB72DE2C62677600356FDA /* UniversityListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListCell.swift; sourceTree = "<group>"; };
+		9BBB72DF2C62677600356FDA /* UniversityListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityListCell.xib; sourceTree = "<group>"; };
+		9BBB72E22C62724800356FDA /* UniversityListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListPresenter.swift; sourceTree = "<group>"; };
+		9BBB72E52C62732700356FDA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9BBB72E72C627AA700356FDA /* UniversityListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListInteractor.swift; sourceTree = "<group>"; };
+		9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRepository.swift; sourceTree = "<group>"; };
+		9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +117,10 @@
 		9BBB729C2C62581800356FDA /* UniversityTask */ = {
 			isa = PBXGroup;
 			children = (
-				9BBB729D2C62581800356FDA /* AppDelegate.swift */,
-				9BBB729F2C62581800356FDA /* SceneDelegate.swift */,
-				9BBB72A12C62581800356FDA /* ViewController.swift */,
+				9BBB72CD2C62586600356FDA /* App */,
+				9BBB72DB2C62652100356FDA /* Extension */,
+				9BBB72CE2C62587D00356FDA /* Modules */,
+				9BBB72E42C6272FE00356FDA /* Utility */,
 				9BBB72A32C62581800356FDA /* Main.storyboard */,
 				9BBB72A62C62581A00356FDA /* Assets.xcassets */,
 				9BBB72A82C62581A00356FDA /* LaunchScreen.storyboard */,
@@ -125,6 +144,118 @@
 				9BBB72C02C62581A00356FDA /* UniversityTaskUITestsLaunchTests.swift */,
 			);
 			path = UniversityTaskUITests;
+			sourceTree = "<group>";
+		};
+		9BBB72CD2C62586600356FDA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB729D2C62581800356FDA /* AppDelegate.swift */,
+				9BBB729F2C62581800356FDA /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9BBB72CE2C62587D00356FDA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72CF2C62588900356FDA /* UniversityList */,
+				9BBB72D02C6258A100356FDA /* UniversityDetail */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9BBB72CF2C62588900356FDA /* UniversityList */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72E92C627CC000356FDA /* Service */,
+				9BBB72D82C6259F200356FDA /* Entity */,
+				9BBB72D12C6258CB00356FDA /* Protocol */,
+				9BBB72D22C6258D700356FDA /* Interactor */,
+				9BBB72D32C6258ED00356FDA /* Presenter */,
+				9BBB72D52C62590B00356FDA /* Router */,
+				9BBB72D42C6258FE00356FDA /* View */,
+			);
+			path = UniversityList;
+			sourceTree = "<group>";
+		};
+		9BBB72D02C6258A100356FDA /* UniversityDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UniversityDetail;
+			sourceTree = "<group>";
+		};
+		9BBB72D12C6258CB00356FDA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72D62C6259B000356FDA /* UniversityListProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9BBB72D22C6258D700356FDA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72E72C627AA700356FDA /* UniversityListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9BBB72D32C6258ED00356FDA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72E22C62724800356FDA /* UniversityListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9BBB72D42C6258FE00356FDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72DC2C6265B400356FDA /* UniversityListViewController.swift */,
+				9BBB72DE2C62677600356FDA /* UniversityListCell.swift */,
+				9BBB72DF2C62677600356FDA /* UniversityListCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9BBB72D52C62590B00356FDA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9BBB72D82C6259F200356FDA /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72D92C625AA200356FDA /* University.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9BBB72DB2C62652100356FDA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9BBB72E42C6272FE00356FDA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72E52C62732700356FDA /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9BBB72E92C627CC000356FDA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BBB72AA2C62581A00356FDA /* LaunchScreen.storyboard in Resources */,
+				9BBB72E12C62677600356FDA /* UniversityListCell.xib in Resources */,
 				9BBB72A72C62581A00356FDA /* Assets.xcassets in Resources */,
 				9BBB72A52C62581800356FDA /* Main.storyboard in Resources */,
 			);
@@ -258,9 +390,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BBB72A22C62581800356FDA /* ViewController.swift in Sources */,
 				9BBB729E2C62581800356FDA /* AppDelegate.swift in Sources */,
+				9BBB72E02C62677600356FDA /* UniversityListCell.swift in Sources */,
+				9BBB72E32C62724800356FDA /* UniversityListPresenter.swift in Sources */,
+				9BBB72DA2C625AA200356FDA /* University.swift in Sources */,
+				9BBB72DD2C6265B400356FDA /* UniversityListViewController.swift in Sources */,
+				9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */,
+				9BBB72EB2C627D4900356FDA /* UniversityListRepository.swift in Sources */,
 				9BBB72A02C62581800356FDA /* SceneDelegate.swift in Sources */,
+				9BBB72D72C6259B000356FDA /* UniversityListProtocol.swift in Sources */,
+				9BBB72E82C627AA700356FDA /* UniversityListInteractor.swift in Sources */,
+				9BBB72E62C62732700356FDA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
