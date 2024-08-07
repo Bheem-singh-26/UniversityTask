@@ -45,18 +45,19 @@ final class UniversityListPresenter: UniversityListPresenterProtocol {
         return cell
     }
     
-    func didSelectRowAt(index: IndexPath) {
-        
+    func didSelectRowAt(indexPath: IndexPath, on navigationController: UINavigationController?) {
+        let university = self.universities[indexPath.row]
+        router?.pushToUniversityDetail(on: navigationController, with: university)
     }
     
 }
 
 extension UniversityListPresenter: UniversityListOutputInteractorProtocol {
     
-    func fetchUniversityListSucess(universities: [University]) {
+    func fetchUniversityListSuccess(universities: [University]) {
         self.universities = universities
         view?.hideActivity()
-        view?.onFetchUniversityListSucess()
+        view?.onFetchUniversityListSuccess()
     }
     
     func fetchUniversityListFailure(error: String) {

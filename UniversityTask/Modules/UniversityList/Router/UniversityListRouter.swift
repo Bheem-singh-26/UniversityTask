@@ -30,7 +30,10 @@ final class UniversityListRouter: UniversityListRouterProtocol {
         
     }
     
-    func pushToUniversityDetail(on view: UniversityListViewProtocol?, with university: University) {
+    func pushToUniversityDetail(on navigationController: UINavigationController?, with university: University) {
+        
+        guard let universityDetailView = UniversityDetailRouter.createModule(with: university) else { return }
+        navigationController?.pushViewController(universityDetailView, animated: true)
         
     }
 }

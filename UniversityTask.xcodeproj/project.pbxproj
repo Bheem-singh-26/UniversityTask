@@ -27,6 +27,11 @@
 		9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */; };
 		9BBB72F22C62A8B800356FDA /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72F12C62A8B800356FDA /* HttpUtility.swift */; };
 		9BBB72F52C63342700356FDA /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72F42C63342700356FDA /* ActivityIndicatorPresenter.swift */; };
+		9BBB72FF2C63395000356FDA /* UniversityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72FE2C63395000356FDA /* UniversityDetailViewController.swift */; };
+		9BBB73012C633A3400356FDA /* UniversityDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB73002C633A3400356FDA /* UniversityDetailProtocol.swift */; };
+		9BBB73032C633D3B00356FDA /* UniversityDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB73022C633D3B00356FDA /* UniversityDetailRouter.swift */; };
+		9BBB73052C633E7300356FDA /* UniversityDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB73042C633E7300356FDA /* UniversityDetailPresenter.swift */; };
+		9BBB73072C63475600356FDA /* UniversityDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB73062C63475600356FDA /* UniversityDetailInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +76,11 @@
 		9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRouter.swift; sourceTree = "<group>"; };
 		9BBB72F12C62A8B800356FDA /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		9BBB72F42C63342700356FDA /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
+		9BBB72FE2C63395000356FDA /* UniversityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailViewController.swift; sourceTree = "<group>"; };
+		9BBB73002C633A3400356FDA /* UniversityDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailProtocol.swift; sourceTree = "<group>"; };
+		9BBB73022C633D3B00356FDA /* UniversityDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailRouter.swift; sourceTree = "<group>"; };
+		9BBB73042C633E7300356FDA /* UniversityDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailPresenter.swift; sourceTree = "<group>"; };
+		9BBB73062C63475600356FDA /* UniversityDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityDetailInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +196,11 @@
 		9BBB72D02C6258A100356FDA /* UniversityDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9BBB72F92C6338D100356FDA /* Protocol */,
+				9BBB72FA2C6338DB00356FDA /* Interactor */,
+				9BBB72FB2C6338E500356FDA /* Presenter */,
+				9BBB72FC2C6338F300356FDA /* Router */,
+				9BBB72FD2C63390700356FDA /* View */,
 			);
 			path = UniversityDetail;
 			sourceTree = "<group>";
@@ -286,6 +301,46 @@
 				9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		9BBB72F92C6338D100356FDA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB73002C633A3400356FDA /* UniversityDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		9BBB72FA2C6338DB00356FDA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB73062C63475600356FDA /* UniversityDetailInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9BBB72FB2C6338E500356FDA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB73042C633E7300356FDA /* UniversityDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9BBB72FC2C6338F300356FDA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB73022C633D3B00356FDA /* UniversityDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9BBB72FD2C63390700356FDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72FE2C63395000356FDA /* UniversityDetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,10 +482,15 @@
 				9BBB72DA2C625AA200356FDA /* University.swift in Sources */,
 				9BBB72DD2C6265B400356FDA /* UniversityListViewController.swift in Sources */,
 				9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */,
+				9BBB72FF2C63395000356FDA /* UniversityDetailViewController.swift in Sources */,
 				9BBB72F52C63342700356FDA /* ActivityIndicatorPresenter.swift in Sources */,
+				9BBB73052C633E7300356FDA /* UniversityDetailPresenter.swift in Sources */,
+				9BBB73072C63475600356FDA /* UniversityDetailInteractor.swift in Sources */,
 				9BBB72EB2C627D4900356FDA /* UniversityListRepository.swift in Sources */,
 				9BBB72A02C62581800356FDA /* SceneDelegate.swift in Sources */,
+				9BBB73012C633A3400356FDA /* UniversityDetailProtocol.swift in Sources */,
 				9BBB72D72C6259B000356FDA /* UniversityListProtocol.swift in Sources */,
+				9BBB73032C633D3B00356FDA /* UniversityDetailRouter.swift in Sources */,
 				9BBB72E82C627AA700356FDA /* UniversityListInteractor.swift in Sources */,
 				9BBB72E62C62732700356FDA /* Constants.swift in Sources */,
 			);

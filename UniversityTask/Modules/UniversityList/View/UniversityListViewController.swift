@@ -24,6 +24,10 @@ final class UniversityListViewController: UIViewController, ActivityIndicatorPre
         presenter?.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        presenter?.refresh()
+    }
+    
     private func setUpUI() {
         self.title = Constants.StringConstant.universityList
         tableView.register(UINib(nibName: UniversityListCell.identifier, bundle: nil), forCellReuseIdentifier: UniversityListCell.identifier)
@@ -37,7 +41,7 @@ final class UniversityListViewController: UIViewController, ActivityIndicatorPre
 
 extension UniversityListViewController: UniversityListViewProtocol {
     
-    func onFetchUniversityListSucess() {
+    func onFetchUniversityListSuccess() {
         DispatchQueue.main.async {
             self.tableView?.reloadData()
         }
@@ -72,7 +76,7 @@ extension UniversityListViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.didSelectRowAt(index: indexPath)
+        presenter?.didSelectRowAt(indexPath: indexPath, on: self.navigationController)
     }
     
 }

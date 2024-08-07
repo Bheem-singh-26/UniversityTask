@@ -24,7 +24,7 @@ final class UniversityListInteractor: UniversityListInputInteractorProtocol {
             switch result {
             case .success(let universities):
                 self?.universities = universities
-                self?.presenter?.fetchUniversityListSucess(universities: universities)
+                self?.presenter?.fetchUniversityListSuccess(universities: universities)
             case .failure(let error):
                 self?.presenter?.fetchUniversityListFailure(error: error.localizedDescription)
             }
