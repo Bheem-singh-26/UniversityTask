@@ -18,14 +18,19 @@ final class UniversityListPresenter: UniversityListPresenterProtocol {
     
     var router: UniversityListRouterProtocol?
     
+    private var isFirstCall = true
+    
     func viewDidLoad() {
         view?.showActivity()
-        interactor?.fetchUniversityList()
+        interactor?.fetchUniversityList(shouldRefresh: false)
     }
     
     func refresh() {
-        view?.showActivity()
-        interactor?.fetchUniversityList()
+        if !isFirstCall {
+            view?.showActivity()
+            interactor?.fetchUniversityList(shouldRefresh: true)
+        }
+        isFirstCall = false
     }
     
     func numberOfRowInsection() -> Int {
@@ -62,7 +67,7 @@ extension UniversityListPresenter: UniversityListOutputInteractorProtocol {
     
     func fetchUniversityListFailure(error: String) {
         view?.hideActivity()
-        view?.onFetchUniversityListFailure(error: "Getting Error \(error)")
+        view?.onFetchUniversityListFailure(error: error)
     }
     
 }

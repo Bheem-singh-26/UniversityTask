@@ -23,7 +23,13 @@ struct Constants {
         static let universityList = "University List"
         static let universityDetail = "University Detail"
         
-        static let universityDetailNotFound = "University Detail not found."
+        static let universityDetailNotFound = "We are not having any details about this university."
+        static let NetworkNotFound = "You're not conneted, check your internet connectivity and try again"
+        static let ok = "Ok"
+    }
+    
+    struct Image {
+        static let refresh = UIImage(systemName: "arrow.clockwise")
     }
   
 }

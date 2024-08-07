@@ -35,7 +35,7 @@ protocol UniversityListInputInteractorProtocol: AnyObject {
     // presenter -> interactor
     var presenter:UniversityListOutputInteractorProtocol? {get set}
     var universities: [University]? {get set}
-    func fetchUniversityList()
+    func fetchUniversityList(shouldRefresh: Bool)
 }
 
 protocol UniversityListOutputInteractorProtocol: AnyObject {

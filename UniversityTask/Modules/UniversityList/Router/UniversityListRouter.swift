@@ -17,7 +17,11 @@ final class UniversityListRouter: UniversityListRouterProtocol {
         }
         
         let presenter: UniversityListPresenterProtocol & UniversityListOutputInteractorProtocol = UniversityListPresenter()
-        let interactor: UniversityListInputInteractorProtocol = UniversityListInteractor(repository: UniversityListRepositoryImpl())
+        let interactor: UniversityListInputInteractorProtocol = UniversityListInteractor( repository: UniversityListRepositoryImpl(
+                apiClient: APIClient.shared,
+                database: RealmManager.shared,
+                network: Reachability()
+            ))
         let router:UniversityListRouter = UniversityListRouter()
         
         view.presenter = presenter

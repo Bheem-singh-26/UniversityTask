@@ -36,7 +36,7 @@ class UniversityDetailViewController: UIViewController {
     
     private func setupRightBarButton() {
         let rightBarButton = UIButton(type: .custom)
-        rightBarButton.setImage(UIImage(systemName: "arrow.clockwise"), for: .normal)
+        rightBarButton.setImage(Constants.Image.refresh, for: .normal)
         rightBarButton.addTarget(self, action: #selector(refreshButtonAction(sender:)), for: .touchUpInside)
         rightBarButton.frame=CGRectMake(0, 0, 30, 30)
         let barButton = UIBarButtonItem(customView: rightBarButton)
@@ -49,14 +49,14 @@ class UniversityDetailViewController: UIViewController {
 
 }
 
-extension UniversityDetailViewController: UniversityDetailViewProtocol {
+extension UniversityDetailViewController: UniversityDetailViewProtocol, Alertable {
     
     func onFetchUniversityDetailSuccess() {
         presenter?.populateDataIn(nameLabel: nameLabel, stateLabel: stateLabel, countryLabel: countryLabel, codeLabel: countryCodeLabel, webPageLabel: webPageLabel)
     }
     
     func onFetchUniversityDetailFailure(error: String) {
-        print(error)
+        issueAlert(message: error)
     }
     
 }

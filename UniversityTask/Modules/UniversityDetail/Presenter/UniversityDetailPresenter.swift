@@ -27,7 +27,7 @@ final class UniversityDetailPresenter: UniversityDetailPresenterProtocol {
         stateLabel.text = university?.stateProvince
         countryLabel.text = university?.country
         codeLabel.text = university?.alphaTwoCode
-        webPageLabel.text = university?.webPages?.first ?? ""
+        webPageLabel.text = university?.webPages.first ?? ""
     }
     
     func popToUniversityList(on navigationController: UINavigationController?) {

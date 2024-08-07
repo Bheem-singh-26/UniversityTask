@@ -1,5 +1,5 @@
 //
-//  HttpUtility.swift
+//  APIClient.swift
 //  UniversityTask
 //
 //  Created by Bheem Singh on 07/08/24.
@@ -15,9 +15,9 @@ enum HttpError: Error {
     case nonSuccessStatusCode
 }
 
-final class HttpUtility {
+final class APIClient {
 
-    static let shared: HttpUtility = HttpUtility()
+    static let shared: APIClient = APIClient()
     
     private init(){}
     

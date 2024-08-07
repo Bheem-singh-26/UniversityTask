@@ -13,14 +13,14 @@ final class UniversityListInteractor: UniversityListInputInteractorProtocol {
     
     var universities: [University]?
     
-    private var respository: UniversityListRepository
+    private var respository: any UniversityListRepository
     
-    init(repository: UniversityListRepository) {
+    init(repository: any UniversityListRepository) {
         self.respository = repository
     }
     
-    func fetchUniversityList() {
-        respository.fetchUniversityList { [weak self] result in
+    func fetchUniversityList(shouldRefresh: Bool) {
+        respository.fetchList(shouldRefresh: shouldRefresh) { [weak self] result in
             switch result {
             case .success(let universities):
                 self?.universities = universities

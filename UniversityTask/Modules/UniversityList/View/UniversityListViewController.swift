@@ -39,7 +39,7 @@ final class UniversityListViewController: UIViewController, ActivityIndicatorPre
 
 }
 
-extension UniversityListViewController: UniversityListViewProtocol {
+extension UniversityListViewController: UniversityListViewProtocol, Alertable {
     
     func onFetchUniversityListSuccess() {
         DispatchQueue.main.async {
@@ -48,7 +48,7 @@ extension UniversityListViewController: UniversityListViewProtocol {
     }
     
     func onFetchUniversityListFailure(error: String) {
-        print(error)
+        issueAlert(message: error)
     }
     
     func showActivity() {
