@@ -29,7 +29,7 @@ final class UniversityListRepositoryImpl: UniversityListRepository {
         let localList = fetchLocalList()
         if localList.isEmpty || shouldRefresh {
             
-            if !Reachability().isConnectedToNetwork(){
+            if !network.isConnectedToNetwork(){
                 let error = NSError(domain: "", code: 401, userInfo: [ NSLocalizedDescriptionKey: Constants.StringConstant.NetworkNotFound])
                 completionHandler(.failure(error))
             }
@@ -54,12 +54,11 @@ final class UniversityListRepositoryImpl: UniversityListRepository {
         }
     }
     
-    private func saveList(result: [University]) {
+    func saveList(result: [University]) {
         if fetchLocalList().isEmpty {
             database.create(result)
         }
     }
-    
     
     private func fetchLocalList() -> [University] {
         return database.fetchAll(University.self)

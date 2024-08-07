@@ -10,9 +10,7 @@ import RealmSwift
 
 class RealmManager {
     
-    static let shared = RealmManager()
-    
-    private init() {}
+    init() {}
     
     // MARK: - Create
     
@@ -55,7 +53,6 @@ class RealmManager {
     }
     
 }
-
 
 extension Realm {
     public func safeWrite(_ block: (() throws -> Void)) throws {
