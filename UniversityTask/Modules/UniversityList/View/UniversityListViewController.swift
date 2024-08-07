@@ -7,11 +7,13 @@
 
 import UIKit
 
-final class UniversityListViewController: UIViewController {
+final class UniversityListViewController: UIViewController, ActivityIndicatorPresenter {
 
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: (UniversityListPresenterProtocol & UniversityListOutputInteractorProtocol)?
+    
+    var activityIndicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,7 @@ final class UniversityListViewController: UIViewController {
     }
     
     private func setUpUI() {
+        self.title = Constants.StringConstant.universityList
         tableView.register(UINib(nibName: UniversityListCell.identifier, bundle: nil), forCellReuseIdentifier: UniversityListCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,7 +38,9 @@ final class UniversityListViewController: UIViewController {
 extension UniversityListViewController: UniversityListViewProtocol {
     
     func onFetchUniversityListSucess() {
-        tableView?.reloadData()
+        DispatchQueue.main.async {
+            self.tableView?.reloadData()
+        }
     }
     
     func onFetchUniversityListFailure(error: String) {
@@ -43,11 +48,11 @@ extension UniversityListViewController: UniversityListViewProtocol {
     }
     
     func showActivity() {
-        // show activity:
+        showActivityIndicator()
     }
     
     func hideActivity() {
-        // hide activity:
+        hideActivityIndicator()
     }
     
 }

@@ -12,17 +12,19 @@ final class UniversityListPresenter: UniversityListPresenterProtocol {
     
     var universities = [University]()
     
-    var view: UniversityListViewProtocol?
+    weak var view: UniversityListViewProtocol?
     
     var interactor: UniversityListInputInteractorProtocol?
     
     var router: UniversityListRouterProtocol?
     
     func viewDidLoad() {
+        view?.showActivity()
         interactor?.fetchUniversityList()
     }
     
     func refresh() {
+        view?.showActivity()
         interactor?.fetchUniversityList()
     }
     
@@ -38,7 +40,7 @@ final class UniversityListPresenter: UniversityListPresenterProtocol {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: UniversityListCell.identifier) as? UniversityListCell else {
             return UITableViewCell()
         }
-        //cell.setData(for: universities[indexPath.row])
+        cell.setData(for: universities[indexPath.row])
         
         return cell
     }
@@ -53,10 +55,12 @@ extension UniversityListPresenter: UniversityListOutputInteractorProtocol {
     
     func fetchUniversityListSucess(universities: [University]) {
         self.universities = universities
+        view?.hideActivity()
         view?.onFetchUniversityListSucess()
     }
     
     func fetchUniversityListFailure(error: String) {
+        view?.hideActivity()
         view?.onFetchUniversityListFailure(error: "Getting Error \(error)")
     }
     

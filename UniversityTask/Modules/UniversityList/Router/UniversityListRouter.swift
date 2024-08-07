@@ -17,7 +17,7 @@ final class UniversityListRouter: UniversityListRouterProtocol {
         }
         
         let presenter: UniversityListPresenterProtocol & UniversityListOutputInteractorProtocol = UniversityListPresenter()
-        let interactor: UniversityListInputInteractorProtocol = UniversityListInteractor()
+        let interactor: UniversityListInputInteractorProtocol = UniversityListInteractor(repository: UniversityListRepositoryImpl())
         let router:UniversityListRouter = UniversityListRouter()
         
         view.presenter = presenter

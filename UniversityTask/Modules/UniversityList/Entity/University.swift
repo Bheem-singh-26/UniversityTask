@@ -8,11 +8,12 @@
 import Foundation
 
 struct University: Decodable {
-    let alphaTwoCode: String
-    let webPages: [String]
+    let alphaTwoCode: String?
+    let webPages: [String]?
     let country: String
-    let domains: [String]
-    let name, stateProvince: String
+    let domains: [String]?
+    let name: String
+    let stateProvince: String?
 
     enum CodingKeys: String, CodingKey {
         case alphaTwoCode = "alpha_two_code"

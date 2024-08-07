@@ -25,6 +25,8 @@
 		9BBB72E82C627AA700356FDA /* UniversityListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72E72C627AA700356FDA /* UniversityListInteractor.swift */; };
 		9BBB72EB2C627D4900356FDA /* UniversityListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */; };
 		9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */; };
+		9BBB72F22C62A8B800356FDA /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72F12C62A8B800356FDA /* HttpUtility.swift */; };
+		9BBB72F52C63342700356FDA /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBB72F42C63342700356FDA /* ActivityIndicatorPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		9BBB72E72C627AA700356FDA /* UniversityListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListInteractor.swift; sourceTree = "<group>"; };
 		9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRepository.swift; sourceTree = "<group>"; };
 		9BBB72EC2C627E1500356FDA /* UniversityListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityListRouter.swift; sourceTree = "<group>"; };
+		9BBB72F12C62A8B800356FDA /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
+		9BBB72F42C63342700356FDA /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9BBB72CD2C62586600356FDA /* App */,
+				9BBB72EF2C62A89500356FDA /* Service */,
 				9BBB72DB2C62652100356FDA /* Extension */,
 				9BBB72CE2C62587D00356FDA /* Modules */,
 				9BBB72E42C6272FE00356FDA /* Utility */,
@@ -167,7 +172,7 @@
 		9BBB72CF2C62588900356FDA /* UniversityList */ = {
 			isa = PBXGroup;
 			children = (
-				9BBB72E92C627CC000356FDA /* Service */,
+				9BBB72F72C63380100356FDA /* Repository */,
 				9BBB72D82C6259F200356FDA /* Entity */,
 				9BBB72D12C6258CB00356FDA /* Protocol */,
 				9BBB72D22C6258D700356FDA /* Interactor */,
@@ -245,17 +250,42 @@
 		9BBB72E42C6272FE00356FDA /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				9BBB72F32C63340500356FDA /* Helper */,
 				9BBB72E52C62732700356FDA /* Constants.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
 		};
-		9BBB72E92C627CC000356FDA /* Service */ = {
+		9BBB72EF2C62A89500356FDA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72F02C62A8A100356FDA /* HttpUtility */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		9BBB72F02C62A8A100356FDA /* HttpUtility */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72F12C62A8B800356FDA /* HttpUtility.swift */,
+			);
+			path = HttpUtility;
+			sourceTree = "<group>";
+		};
+		9BBB72F32C63340500356FDA /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				9BBB72F42C63342700356FDA /* ActivityIndicatorPresenter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		9BBB72F72C63380100356FDA /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				9BBB72EA2C627D4900356FDA /* UniversityListRepository.swift */,
 			);
-			path = Service;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,12 +420,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BBB72F22C62A8B800356FDA /* HttpUtility.swift in Sources */,
 				9BBB729E2C62581800356FDA /* AppDelegate.swift in Sources */,
 				9BBB72E02C62677600356FDA /* UniversityListCell.swift in Sources */,
 				9BBB72E32C62724800356FDA /* UniversityListPresenter.swift in Sources */,
 				9BBB72DA2C625AA200356FDA /* University.swift in Sources */,
 				9BBB72DD2C6265B400356FDA /* UniversityListViewController.swift in Sources */,
 				9BBB72ED2C627E1500356FDA /* UniversityListRouter.swift in Sources */,
+				9BBB72F52C63342700356FDA /* ActivityIndicatorPresenter.swift in Sources */,
 				9BBB72EB2C627D4900356FDA /* UniversityListRepository.swift in Sources */,
 				9BBB72A02C62581800356FDA /* SceneDelegate.swift in Sources */,
 				9BBB72D72C6259B000356FDA /* UniversityListProtocol.swift in Sources */,

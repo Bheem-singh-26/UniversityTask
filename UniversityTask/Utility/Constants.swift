@@ -21,5 +21,9 @@ struct Constants {
     struct StoryboardsIds {
         static let universityList = "UniversityListViewController"
     }
+    
+    struct StringConstant {
+        static let universityList = "University List"
+    }
   
 }

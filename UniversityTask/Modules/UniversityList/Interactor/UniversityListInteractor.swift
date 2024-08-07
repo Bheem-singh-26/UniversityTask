@@ -13,8 +13,22 @@ final class UniversityListInteractor: UniversityListInputInteractorProtocol {
     
     var universities: [University]?
     
+    private var respository: UniversityListRepository
+    
+    init(repository: UniversityListRepository) {
+        self.respository = repository
+    }
+    
     func fetchUniversityList() {
-        
+        respository.fetchUniversityList { [weak self] result in
+            switch result {
+            case .success(let universities):
+                self?.universities = universities
+                self?.presenter?.fetchUniversityListSucess(universities: universities)
+            case .failure(let error):
+                self?.presenter?.fetchUniversityListFailure(error: error.localizedDescription)
+            }
+        }
     }
     
 }
